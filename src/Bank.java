@@ -8,6 +8,12 @@ public class Bank {
     }
 
     public void zalozKonto(Konto konto) {
+        for (Konto numerKonta : kontaBankowe) {
+            if (konto.getNumerKonta() == numerKonta.getNumerKonta()) {
+                System.out.println("Konto już istnieje");
+                return;
+            }
+        }
         kontaBankowe.add(konto);
     }
 

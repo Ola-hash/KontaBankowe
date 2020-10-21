@@ -17,7 +17,7 @@ public abstract class Konto {
         }
     }
 
-    public void wyplac(double kwota) {
+    public void wyplac(double kwota) { // poprawic
         if (kwota > 0) {
             stan = stan - kwota;
         } else {
