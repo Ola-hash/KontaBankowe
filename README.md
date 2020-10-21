@@ -1,0 +1,1 @@
+Program sluzy do obslugi kont.
