@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Konto {
     protected double stan;
     private int numerKonta;
@@ -45,5 +47,19 @@ public abstract class Konto {
 
     public int getNumerKonta() {
         return numerKonta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Konto)) return false;
+        Konto konto = (Konto) o;
+        return Double.compare(konto.stan, stan) == 0 &&
+                numerKonta == konto.numerKonta;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(stan, numerKonta);
     }
 }
