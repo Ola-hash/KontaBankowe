@@ -17,11 +17,11 @@ public abstract class Konto {
         }
     }
 
-    public void wyplac(double kwota) { // poprawic
-        if (kwota > 0) {
-            stan = stan - kwota;
-        } else {
+    public void wyplac(double kwota) {
+        if (stan < kwota) {
             System.out.println("Nie można wypłacić pieniędzy");
+        } else {
+            stan = stan - kwota;
         }
     }
 
